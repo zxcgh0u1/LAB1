@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Каталог - Салон штор "Стерх"</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+<div class="container">
+  <div class="site-header">
+    <div class="company-name">Салон штор «Стерх»</div>
+    <div class="welcome-message">Добро пожаловать в мир уюта и стиля!</div>
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="photo/logo.png" alt="Логотип" class="logo-img">
+      <span class="logo-text">СТЕРХ</span>
+    </div>
+    <div class="login-form">
+      <form action="/login" method="post">
+        логин: <input type="text" name="login"><br>
+        пароль: <input type="password" name="password"><br>
+        <button type="submit">Войти</button>
+      </form>
+      <p><a href="register.html">Регистрация</a></p>
+    </div>
+  </header>
+
+  <nav class="top-menu">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="guestbook.html">Отзывы</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <aside class="side-menu">
+      <ul>
+        <li><a href="#product1">Товар 1</a></li>
+        <li><a href="#product2">Товар 2</a></li>
+        <li><a href="#product3">Товар 3</a></li>
+        <li><a href="#product4">Товар 4</a></li>
+        <li><a href="#product5">Товар 5</a></li>
+        <li><a href="#product6">Товар 6</a></li>
+      </ul>
+    </aside>
+
+    
+
+    <section class="content">
+      <h2>Каталог (стр. 1)</h2>
+      <form class="contact-form" method="get" action="/search">
+    <label for="search_q">Введите первую букву или название товара:</label>
+    <input type="search" id="search_q" name="q" required>
+    <button type="submit">Поиск</button>
+</form>
+      <div class="catalog">
+        <!-- Товар 1 -->
+        <div class="product" id="product1">
+          <a href="photo/product1.webp" target="_blank">
+            <img src="photo/product1.webp" alt="Шторы Классика Люкс">
+          </a>
+          <p><a href="#" onclick="openModal('modal1'); return false;">Шторы «Классика Люкс»</a></p>
+          <p class="price">7 500 руб.</p>
+        </div>
+        <!-- Товар 2 -->
+        <div class="product" id="product2">
+          <a href="photo/product2.jpg" target="_blank">
+            <img src="photo/product2.jpg" alt="Шторы Классика">
+          </a>
+          <p><a href="#" onclick="openModal('modal2'); return false;">Шторы «Классика»</a></p>
+          <p class="price">5 500 руб.</p>
+        </div>
+        <!-- Товар 3 -->
+        <div class="product" id="product3">
+          <a href="photo/product3.jpg" target="_blank">
+            <img src="photo/product3.jpg" alt="Шторы Римские">
+          </a>
+          <p><a href="#" onclick="openModal('modal3'); return false;">Шторы «Римские»</a></p>
+          <p class="price">6 000 руб.</p>
+        </div>
+        <!-- Товар 4 -->
+        <div class="product" id="product4">
+          <a href="photo/product4.webp" target="_blank">
+            <img src="photo/product4.webp" alt="Шторы Современные">
+          </a>
+          <p><a href="#" onclick="openModal('modal4'); return false;">Шторы «Современные»</a></p>
+          <p class="price">8 000 руб.</p>
+        </div>
+        <!-- Товар 5 -->
+        <div class="product" id="product5">
+          <a href="photo/product5.jpg" target="_blank">
+            <img src="photo/product5.jpg" alt="Шторы Японские панели">
+          </a>
+          <p><a href="#" onclick="openModal('modal5'); return false;">Шторы «Японские панели»</a></p>
+          <p class="price">9 000 руб.</p>
+        </div>
+        <!-- Товар 6 -->
+        <div class="product" id="product6">
+          <a href="photo/product6.jpg" target="_blank">
+            <img src="photo/product6.jpg" alt="Шторы Детские">
+          </a>
+          <p><a href="#" onclick="openModal('modal6'); return false;">Шторы «Детские»</a></p>
+          <p class="price">4 000 руб.</p>
+        </div>
+      </div>
+
+      <p style="text-align:center; margin-top:20px;">
+        <a href="catalog2.html">Следующая страница &raquo;</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright">&copy; 2025 Салон штор "Стерх". Все права защищены.</div>
+  </footer>
+</div>
+
+<!-- Модальные окна -->
+<div id="modal1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal1')">&times;</span><h3>Шторы «Классика Люкс»</h3><p class="short-description">Роскошные классические шторы премиум-класса.</p><ul class="characteristics"><li>Материал: лен с шелком</li><li>Затемнение 85%</li><li>Италия</li></ul><p class="long-description">Эти эксклюзивные шторы изготавливаются индивидуально под заказ и создают атмосферу уюта и элегантности.</p></div></div>
+<div id="modal2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal2')">&times;</span><h3>Шторы «Классика»</h3><p class="short-description">Классические шторы из плотной ткани.</p><ul class="characteristics"><li>Материал: хлопок, полиэстер</li><li>Размер: 250x140 см</li><li>Цвет: бежевый</li></ul><p class="long-description">Шторы отлично защищают от солнечного света и создают уютную атмосферу.</p></div></div>
+<div id="modal3" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal3')">&times;</span><h3>Шторы «Римские»</h3><p class="short-description">Стильные римские шторы для современных интерьеров.</p><ul class="characteristics"><li>Материал: полиэстер</li><li>Подъёмный механизм</li><li>Цвет: серый, белый</li></ul><p class="long-description">Идеально подходят для кухни и кабинета, создают уют и регулируют освещенность.</p></div></div>
+<div id="modal4" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal4')">&times;</span><h3>Шторы «Современные»</h3><p class="short-description">Современный дизайн для стильных квартир.</p><ul class="characteristics"><li>Материал: полиэстер</li><li>Размер: индивидуальный</li><li>Цвета: графит, белый</li></ul><p class="long-description">Простота ухода, устойчивость к выгоранию, подходят для гостиных.</p></div></div>
+<div id="modal5" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal5')">&times;</span><h3>Шторы «Японские панели»</h3><p class="short-description">Минимализм и элегантность.</p><ul class="characteristics"><li>Материал: полиэстер</li><li>Панельная система</li><li>Широкая цветовая гамма</li></ul><p class="long-description">Подходят для зонирования пространства и современных интерьеров.</p></div></div>
+<div id="modal6" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal6')">&times;</span><h3>Шторы «Детские»</h3><p class="short-description">Весёлые и яркие шторы для детских комнат.</p><ul class="characteristics"><li>Материал: хлопок</li><li>Декор: мультяшные принты</li><li>Размер: 200x130 см</li></ul><p class="long-description">Гипоаллергенные ткани, лёгкие в уходе, создают сказочную атмосферу.</p></div></div>
+
+<script>
+function openModal(id){ document.getElementById(id).style.display='block'; }
+function closeModal(id){ document.getElementById(id).style.display='none'; }
+</script>
+</body>
+</html>

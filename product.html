@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Товары - Салон штор "Стерх"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Верхняя полоса -->
+    <div class="site-header">
+        <div class="company-name">Салон штор «Стерх»</div>
+        <div class="welcome-message">Добро пожаловать в мир уюта и стиля!</div>
+    </div>
+
+    <!-- Логотип и форма входа -->
+    <header>
+        <div class="logo">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAY0lEQVR4Aa2ShQGAMBADM/qNxmQ41ILW/T3RZG2wlj5mCoBkA5av/RwV1pNJPylEaQB273CjECIBPEK5gkk/KiwzXLJ8QM8KwbAl3VPBS9wh6f0j3F3hHbhAG+hAjf/k+03vGV3Jq+mFBJ+IAAAAAElFTkSuQmCC" 
+                 alt="Логотип Стерх" 
+                 class="logo-img">
+            <span class="logo-text">СТЕРХ</span>
+        </div>
+        <div class="login-form">
+            <form action="/login" method="post">
+                логин: <input type="text" name="login"><br>
+                пароль: <input type="password" name="password"><br>
+                <button type="submit">войти</button>
+            </form>
+            <p><a href="register.html">Регистрация</a></p>
+        </div>
+    </header>
+
+    <!-- Верхнее меню -->
+    <nav class="top-menu">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="product.html">Товар</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="guestbook.html">Отзывы</a>
+    </nav>
+
+    <!-- Основная часть -->
+    <main>
+        <aside class="side-menu">
+            <a href="index.html">О нас</a>
+            <a href="index.html#history">История фирмы</a>
+            <a href="index.html#employees">Сотрудники</a>
+        </aside>
+
+        <section class="content">
+
+            <!-- ===== Товар 1 ===== -->
+            <section id="product1">
+                <h2>Шторы «Классика Люкс»</h2>
+                <div class="product-image">
+                    <a href="https://images.prom.ua/3208215273_w600_h600_3208215273.jpg" target="_blank">
+                        <img src="https://images.prom.ua/3208215273_w600_h600_3208215273.jpg" alt="Шторы Классика Люкс" width="400">
+                    </a>
+                    <p>Нажмите на изображение для просмотра в полном размере</p>
+                </div>
+
+                <h3>Описание товара</h3>
+                <p>Роскошные классические шторы премиум-класса из итальянской ткани...</p>
+
+                <h3>Характеристики товара</h3>
+                <table>
+                    <tr><td>Материал:</td><td>100% итальянский лен с шелковой нитью</td></tr>
+                    <tr><td>Размеры:</td><td>Индивидуальный пошив под ваш проем</td></tr>
+                    <tr><td>Цвета:</td><td>бежевый, кремовый, шампань, слоновая кость</td></tr>
+                    <tr><td>Плотность:</td><td>85%</td></tr>
+                    <tr><td>Цена:</td><td>7 500 руб.</td></tr>
+                </table>
+            </section>
+
+            <hr>
+
+            <!-- ===== Товар 2 ===== -->
+            <section id="product2">
+                <h2>Шторы «Классика»</h2>
+                <div class="product-image">
+                    <a href="https://ir.ozone.ru/s3/multimedia-6/c1000/6008643066.jpg" target="_blank">
+                        <img src="https://ir.ozone.ru/s3/multimedia-6/c1000/6008643066.jpg" alt="Шторы Классика" width="400">
+                    </a>
+                    <p>Нажмите на изображение для просмотра в полном размере</p>
+                </div>
+
+                <h3>Описание товара</h3>
+                <p>Классические шторы из плотной ткани, подходят для гостиной и спальни...</p>
+
+                <h3>Характеристики товара</h3>
+                <table>
+                    <tr><td>Материал:</td><td>Хлопок, полиэстер</td></tr>
+                    <tr><td>Размеры:</td><td>250×140 см</td></tr>
+                    <tr><td>Цвета:</td><td>бежевый, светло-коричневый, кремовый</td></tr>
+                    <tr><td>Плотность:</td><td>70%</td></tr>
+                    <tr><td>Цена:</td><td>4 500 руб.</td></tr>
+                </table>
+            </section>
+
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="copyright">&copy; 2025 Салон штор "Стерх". Все права защищены.</div>
+    </footer>
+</div>
+
+</body>
+</html>

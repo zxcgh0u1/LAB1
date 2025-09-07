@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Егор",
+    "email": "test@mail.ru",
+    "subject": "Заказ штор",
+    "message": "Хочу рассчитать стоимость.",
+    "date": "02.09.2025, 14:35:22"
+  },
+  {
+    "name": "Егор",
+    "email": "egorburmistroff@gmail.com",
+    "subject": "order",
+    "message": "Абоба",
+    "date": "03.09.2025, 22:11:40"
+  },
+  {
+    "name": "уйцу",
+    "email": "egorburmistroff@gmail.com",
+    "subject": "consultation",
+    "message": "аамвмвамвам",
+    "date": "03.09.2025, 22:26:33"
+  }
+]

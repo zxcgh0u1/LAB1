@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Контакты - Салон штор "Стерх"</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="site-header">
+    <div class="company-name">Салон штор «Стерх»</div>
+    <div class="welcome-message">Добро пожаловать в мир уюта и стиля!</div>
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="photo/logo.png" alt="Логотип" class="logo-img">
+      <span class="logo-text">СТЕРХ</span>
+    </div>
+    <div class="login-form">
+      <form action="/login" method="post">
+        логин: <input type="text" name="login"><br>
+        пароль: <input type="password" name="password"><br>
+        <button type="submit">Войти</button>
+      </form>
+      <p><a href="register.html">Регистрация</a></p>
+    </div>
+  </header>
+
+  <nav class="top-menu">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="guestbook.html">Отзывы</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <aside class="side-menu">
+      <ul>
+        <li><a href="#contact-form">Напишите нам</a></li>
+        <li><a href="#address">Адрес</a></li>
+        <li><a href="#map">Карта</a></li>
+      </ul>
+    </aside>
+
+    <section class="content">
+      <h2 id="contact-form">Напишите нам</h2>
+      <form class="contact-form" action="/contact" method="post">
+        <label for="name">Имя *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Телефон</label>
+        <input type="tel" id="phone" name="phone" placeholder="+7 (900) 123-45-67">
+
+        <label for="subject">Тема *</label>
+        <select id="subject" name="subject" required>
+          <option value="">Выберите тему</option>
+          <option value="consultation">Консультация</option>
+          <option value="order">Заказ</option>
+          <option value="complaint">Жалоба</option>
+          <option value="suggestion">Предложение</option>
+          <option value="other">Другое</option>
+        </select>
+
+        <label for="product">Интересующий товар</label>
+        <select id="product" name="product">
+          <option value="">Не выбрано</option>
+          <option value="classic">Классические шторы</option>
+          <option value="modern">Современные шторы</option>
+          <option value="roman">Римские шторы</option>
+          <option value="japanese">Японские панели</option>
+        </select>
+
+        <label for="budget">Бюджет (руб.)</label>
+        <input type="number" id="budget" name="budget" min="0" placeholder="5000">
+
+        <label for="message">Сообщение *</label>
+        <textarea id="message" name="message" required placeholder="Опишите ваш вопрос или пожелания..."></textarea>
+
+        <label>
+          <input type="checkbox" name="newsletter" checked>
+          Подписаться на рассылку новостей и акций
+        </label>
+
+        <button type="submit">Отправить сообщение</button>
+      </form>
+
+      <h2 id="address">Адрес</h2>
+      <table>
+        <tr>
+          <td>Адрес:</td>
+          <td><strong>Оренбург, ул. Карагандинская, 72</strong></td>
+        </tr>
+        <tr>
+          <td>Телефон:</td>
+          <td><strong>+7 (353) 222-33-44</strong></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><strong>orenburg@sterkh.ru</strong></td>
+        </tr>
+        <tr>
+          <td>WhatsApp:</td>
+          <td><strong>+7 (912) 345-67-89</strong></td>
+        </tr>
+        <tr>
+          <td>Telegram:</td>
+          <td><strong>@sterkh_orenburg</strong></td>
+        </tr>
+        <tr>
+          <td>Режим работы:</td>
+          <td>пн–пт 9:00–20:00, сб 10:00–18:00, вс 11:00–16:00</td>
+        </tr>
+      </table>
+
+      <h3 id="map">Как добраться</h3>
+      <div class="map-container">
+        <div id="yandex-map"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright">&copy; 2025 Салон штор "Стерх". Все права защищены.</div>
+  </footer>
+</div>
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_api_ключ&lang=ru_RU"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  ymaps.ready(function() {
+    var salonCoordinates = [51.786270, 55.149659];
+    var myMap = new ymaps.Map("yandex-map", {
+      center: salonCoordinates, zoom: 16
+    });
+    var myPlacemark = new ymaps.Placemark(salonCoordinates, {
+      hintContent: 'Салон штор "Стерх"',
+      balloonContent: 'г. Оренбург, ул. Карагандинская, 72'
+    });
+    myMap.geoObjects.add(myPlacemark);
+  });
+});
+</script>
+</body>
+</html>

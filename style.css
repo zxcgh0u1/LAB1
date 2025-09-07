@@ -1,0 +1,376 @@
+/* Сброс */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Times New Roman", serif;
+    background: #f8f8f8; /* изменено под условие */
+}
+
+/* Контейнер сайта */
+.container {
+    width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    min-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ====== Шапка сайта ====== */
+.site-header {
+    background: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+
+.company-name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.welcome-message {
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
+}
+
+/* ====== Основная шапка ====== */
+header {
+    background: #ccc;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-form {
+    font-size: 14px;
+    text-align: right;
+}
+
+.login-form input {
+    margin: 2px 0;
+    padding: 5px;
+    width: 160px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-form button {
+    margin-top: 5px;
+    padding: 5px 12px;
+    font-size: 14px;
+}
+
+/* ====== Верхнее меню ====== */
+.top-menu {
+    background: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.top-menu ul {
+    list-style: none; /* убираем маркеры */
+    padding: 0;
+    margin: 0;
+}
+
+.top-menu li {
+    display: inline;
+    margin: 0 40px;
+}
+
+.top-menu a {
+    text-decoration: none;
+    color: blue;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.top-menu a:hover {
+    text-decoration: underline;
+}
+
+/* ====== Основная часть ====== */
+main {
+    display: flex;
+    background: #ddd;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Боковое меню */
+.side-menu {
+    width: 180px;
+    margin-right: 20px;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu li {
+    margin: 8px 0;
+}
+
+.side-menu a {
+    display: block;
+    text-decoration: none;
+    color: blue;
+    font-size: 14px;
+    padding: 5px;
+    border-left: 3px solid transparent;
+}
+
+.side-menu a:hover {
+    border-left: 3px solid blue;
+    background: #eee;
+}
+
+/* Контент */
+.content {
+    background: #fff;
+    padding: 20px;
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Подробное описание товара */
+.content h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0 10px 0;
+    color: #000;
+    background: #eaeaea;
+    padding: 5px;
+}
+
+.short-description {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.long-description {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+/* Характеристики */
+.characteristics {
+    list-style-image: url("images/check.png"); /* кастомные маркеры */
+    margin: 10px 20px;
+    font-size: 14px;
+}
+
+/* Таблица */
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+    width: 100%;
+}
+
+table, td {
+    border: 1px solid #000;
+    padding: 8px;
+}
+
+/* Списки */
+ul, ol {
+    margin: 10px 20px;
+    font-size: 14px;
+}
+
+/* Картинки */
+.product-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.product-image img {
+    border: 3px solid #666; /* цветная рамка */
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.product-image img:hover {
+    transform: scale(1.05);
+    border-color: #333;
+}
+
+/* Каталог */
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.product {
+    text-align: center;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.product img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.product a:hover {
+    text-decoration: underline;
+}
+
+.price {
+    font-weight: bold;
+    color: #d9534f;
+    font-size: 16px;
+}
+
+/* Формы */
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #333;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.contact-form button:hover {
+    background: #555;
+}
+
+/* Карта */
+.map-container {
+    margin: 20px 0;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#yandex-map {
+    width: 100%;
+    height: 400px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* ====== Подвал ====== */
+footer {
+    background: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 2px solid #ccc;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ====== Модальное окно (товары) ====== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    width: 70%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.modal-content img {
+    max-width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 10px; right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
