@@ -8,7 +8,7 @@
 html, body {
     height: 100%;
     font-family: "Times New Roman", serif;
-    background: #f8f8f8; /* изменено под условие */
+    background: #ffff; /* изменено под условие */
 }
 
 /* Контейнер сайта */
@@ -23,10 +23,10 @@ html, body {
 
 /* ====== Шапка сайта ====== */
 .site-header {
-    background: #f0f0f0;
-    padding: 20px;
+    background: #ffff;
+   
     text-align: center;
-    border-bottom: 2px solid #ccc;
+    
 }
 
 .company-name {
@@ -120,7 +120,7 @@ header {
 /* ====== Основная часть ====== */
 main {
     display: flex;
-    background: #ddd;
+    background: #ccc;
     padding: 20px;
     flex: 1;
 }
@@ -330,7 +330,7 @@ ul, ol {
 
 /* ====== Подвал ====== */
 footer {
-    background: #f0f0f0;
+    background: #ccc;
     text-align: center;
     padding: 20px;
     font-size: 14px;
