@@ -39,7 +39,7 @@ html, body {
 .welcome-message {
     font-size: 18px;
     color: #666;
-    font-style: italic;
+  
 }
 
 /* ====== Основная шапка ====== */
@@ -126,10 +126,7 @@ main {
 }
 
 /* Боковое меню */
-.side-menu {
-    width: 180px;
-    margin-right: 20px;
-}
+
 
 .side-menu ul {
     list-style: none;
@@ -144,48 +141,47 @@ main {
     display: block;
     text-decoration: none;
     color: blue;
-    font-size: 14px;
+    font-size: 16px;
     padding: 5px;
-    border-left: 3px solid transparent;
+ 
 }
 
 .side-menu a:hover {
     border-left: 3px solid blue;
-    background: #eee;
+    background: #ffffff;
 }
 
 /* Контент */
 .content {
-    background: #fff;
-    padding: 20px;
+    background: #ccc;
+
     flex: 1;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 18px;
+  
 }
 
 .content h2 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #333;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
+    color: #000000;
+
+ 
 }
 
 /* Подробное описание товара */
 .content h3 {
     font-size: 18px;
-    font-weight: 400;
     margin: 20px 0 10px 0;
     color: #000;
-    background: #eaeaea;
-    padding: 5px;
+    background: #ccc;
+    
 }
 
 .short-description {
-    color: #707070;
-    font-size: 14px;
-    font-style: italic;
+    color: #000000;
+    font-size: 16px;
+
     line-height: 16px;
 }
 
@@ -201,7 +197,7 @@ main {
 .characteristics {
     list-style-image: url("images/check.png"); /* кастомные маркеры */
     margin: 10px 20px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* Таблица */
@@ -209,17 +205,21 @@ table {
     border-collapse: collapse;
     margin: 15px 0;
     width: 100%;
+    border: 3px solid #777; /* общая рамка */
 }
 
-table, td {
-    border: 1px solid #000;
-    padding: 8px;
+td {
+    border: 2px inset #777; /* серые вдавленные границы */
+    padding: 10px;
+    background: #f5f5f5; /* лёгкий фон внутри ячеек, как в макете */
+
 }
+
 
 /* Списки */
 ul, ol {
     margin: 10px 20px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* Картинки */
@@ -339,7 +339,7 @@ footer {
 
 .copyright {
     font-size: 14px;
-    color: #666;
+    color: #000000;
 }
 
 /* ====== Модальное окно (товары) ====== */
@@ -365,7 +365,7 @@ footer {
     max-width: 100%;
     border: 2px solid #ddd;
     border-radius: 5px;
-}
+}   
 
 .close {
     position: absolute;
@@ -373,4 +373,91 @@ footer {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+}
+/* Главная: выравнивание текста и фото */
+.home-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px; /* расстояние между колонками */
+}
+
+.home-left {
+    flex: 1; /* левая часть растягивается */
+}
+
+.home-right img {
+    width: 280px; /* фикс ширина картинки */
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+main {
+    display: flex;
+    background: #ccc;
+    padding: 20px;
+    flex: 1;
+    border-bottom: 10px solid #fff; /* белая полоска-разделитель */
+}
+/* Разделительная белая полоса между main и footer */
+main {
+    border-bottom: 10px solid #fff; /* толщина можно подправить */
+}
+
+/* Компоновка текста и фото на главной (минимальный зазор, без растягивания фото) */
+.home-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;               /* уменьшенный отступ между колонками */
+}
+.home-left { flex: 1; }
+.home-right img {
+    height: 150px;           /* под макет; можно 280–320 */
+    width: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* === Таблица как в макете === */
+/* ВАЖНО: только для этой таблицы, чтобы не затронуть остальные */
+table.mock-table {
+    border-collapse: separate;    /* разъединяем границы */
+    border-spacing: 6px;          /* зазоры между ячейками */
+    width: 100%;
+    margin: 15px 0;
+
+    /* Рамка по сторонам — объёмная */
+    border-top: 1px solid #c2c2c2;
+    border-left: 1px solid #c2c2c2;
+    border-right: 1px solid #353535;
+    border-bottom: 1px solid #353535;
+
+    background: transparent;
+}
+
+table.mock-table td {
+    background: #ccc;         
+    padding: 18px 16px;
+
+ 
+
+    /* внутренняя рамка + лёгкая псевдо-вдавленность */
+    border: 1px solid #ccc;
+    box-shadow:
+        inset 0 1px 0 #353535,   /* верхняя грань */
+        inset 1px 0 0 #353535,   /* левая грань  */
+        inset 0 -2px 0 #c2c2c2,     /* нижняя грань */
+        inset -2px 0 0 #c2c2c2;     /* правая грань */
+}
+
+/* Левая большая ячейка */
+table.mock-table td.mock-big {
+    width: 58%;
+    font-size: 16px;
+    
+    text-align: left;
+    vertical-align: middle;
+}
+.short-description {
+    margin-bottom: 12px; /* регулируй величину по вкусу */
+    line-height: 1.6;
 }

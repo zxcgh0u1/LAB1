@@ -4,54 +4,49 @@
     <meta charset="UTF-8">
     <title>Главная - Салон штор "Стерх"</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        ol.roman { list-style-type: upper-roman; margin: 15px 30px; }
+        ul.square { list-style-type: square; margin: 15px 30px; }
+        ol.decimal { list-style-type: decimal; margin: 15px 30px; }
+        ol.alpha { list-style-type: lower-alpha; margin: 10px 40px; }
+    </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- Верхняя полоса -->
-    <div class="site-header">
+    <div class="site-header"></div>
 
-    </div>
+    <header>
+        <div class="logo">
+            <img src="photo/logo.png" alt="Логотип Стерх" class="logo-img">
+        </div>
 
-    <!-- Логотип и форма входа -->
-    <!-- Логотип, название и форма входа -->
-<header>
-    <div class="logo">
-        <img src="photo/logo.png" 
-             alt="Логотип Стерх" 
-             class="logo-img">
-    </div>
-    
-    <!-- Название сайта -->
-    <div class="site-title">
-        <h1>Салон штор «Стерх»</h1>
-         <div class="welcome-message">Добро пожаловать в мир уюта и стиля!</div>
-    </div>
+        <div class="site-title">
+            <h1>Салон штор «Стерх»</h1>
+            <div class="welcome-message">Добро пожаловать в мир уюта и стиля!</div>
+        </div>
 
-    <div class="login-form">
-        <form action="/login" method="post">
-            логин: <input type="text" name="login"><br>
-            пароль: <input type="password" name="password"><br>
-            <button type="submit">Войти</button>
-        </form>
-        <p><a href="register.html">Регистрация</a></p>
-    </div>
-</header>
+        <div class="login-form">
+            <form action="/login" method="post">
+                логин: <input type="text" name="login"><br>
+                пароль: <input type="password" name="password"><br>
+                <button type="submit">Войти</button>
+            </form>
+            <p><a href="register.html">Регистрация</a></p>
+        </div>
+    </header>
 
-
-    <!-- Верхнее меню -->
     <nav class="top-menu">
         <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="contacts.html">Контакты</a></li>
-            <li><a href="guestbook.html">Отзывы</a></li>
+            <li><a href="index.html#about">О нас</a></li>
+
         </ul>
     </nav>
 
-    <!-- Основная часть -->
     <main>
-        <!-- Боковое меню -->
         <aside class="side-menu">
             <ul>
                 <li><a href="#about">О нас</a></li>
@@ -60,35 +55,101 @@
             </ul>
         </aside>
 
-        <!-- Контент -->
         <section class="content">
             <h2>Главная страница</h2>
-            
-            <h3 id="about">О нас</h3>
-            <p class="short-description">
-                Салон штор «Стерх» — ведущий производитель и поставщик качественных штор и текстиля для дома. 
-                Мы работаем на рынке более 15 лет и предлагаем широкий ассортимент продукции для любого интерьера.
-            </p>
-            
-            <h3 id="history">История фирмы</h3>
-            <p class="long-description">
-                Компания основана в 2008 году с целью предоставления качественных и доступных решений 
-                в области оформления окон. За годы работы мы заслужили доверие тысяч клиентов и продолжаем 
-                развиваться, предлагая новые коллекции и современные решения.
-            </p>
-            
-            <h3 id="employees">Сотрудники</h3>
-            <p class="long-description">В нашем салоне работают высококвалифицированные специалисты с многолетним опытом:</p>
-            <ul class="characteristics">
-                <li>Мария Иванова — главный дизайнер</li>
-                <li>Алексей Петров — менеджер по продажам</li>
-                <li>Елена Сидорова — консультант</li>
-                <li>Дмитрий Козлов — замерщик</li>
-            </ul>
+
+            <div class="home-flex">
+                <div class="home-left">
+                    <p class="short-description">
+    Салон штор «Стерх» — Мы создаём уют и красоту в каждом доме, помогая сделать интерьер гармоничным и завершённым.
+</p>
+
+<p class="short-description">
+    Наша миссия — предложить стильные и качественные решения для оформления окон, которые подчеркнут индивидуальность вашего пространства.
+</p>
+
+<p class="short-description">
+    Мы верим, что шторы — это не просто ткань, а важный элемент интерьера, способный преобразить комнату, наполнить её теплом и светом.
+</p>
+
+
+
+                    <h3 id="info">Основные сведения</h3>
+                    <table class="mock-table">
+                        <tr>
+                            <td class="mock-big" rowspan="2">О компании</td>
+                            <td>Год основания</td>
+                            <td>2008</td>
+                        </tr>
+                        <tr>
+                            <td>Специализация</td>
+                            <td>Шторы и текстиль для дома</td>
+                        </tr>
+                        <tr>
+                            <td>Филиалы</td>
+                            <td>Оренбург</td>
+                            <td>Самара, Екатеринбург</td>
+                        </tr>
+                    </table>
+
+                    
+
+                    <!-- Списки из макета -->
+                    <h3>Примеры списков</h3>
+                    <p>Почему выбирают нас:</p>
+
+                    <ul class="square">
+                        <li>Современные коллекции</li>
+                        <li>Широкий выбор стилей</li>
+                        <li>Собственное производство</li>
+                    </ul>
+
+                    <ol class="roman">
+                        <li>Высокое качество тканей</li>
+                        <li>Индивидуальный подход</li>
+                        <li>Опыт более 15 лет</li>
+                    </ol>
+
+                    <ol class="decimal">
+                        <li>Бесплатный замер</li>
+                            <ol class="alpha">
+                                <li>Консультации дизайнеров</li>
+                                <li>Акции и скидки</li>
+                            </ol>
+                        <li>Доставка по всей России</li>
+                        <li>Гарантия качества
+                            
+                        </li>
+                    </ol>
+                    <h3 id="about">О нас</h3>
+                    <p>
+                        Салон штор «Стерх» — ведущий производитель и поставщик качественных штор и текстиля для дома. 
+                        Мы более 15 лет на рынке, предлагая широкий ассортимент продукции, создающей уют и стиль в каждом доме.
+                    </p>
+
+                    <h3 id="history">История фирмы</h3>
+                    <p>
+                        Компания основана в 2008 году с целью предоставления качественных и доступных решений 
+                        в области оформления окон. За годы работы мы заслужили доверие тысяч клиентов, 
+                        регулярно обновляем коллекции и внедряем современные дизайнерские идеи.
+                    </p>
+
+                    <h3 id="employees">Сотрудники</h3>
+                    <ul>
+                        <li>Мария Иванова — главный дизайнер</li>
+                        <li>Алексей Петров — менеджер по продажам</li>
+                        <li>Елена Сидорова — консультант</li>
+                        <li>Дмитрий Козлов — специалист по установке</li>
+                    </ul>
+                </div>
+
+                <div class="home-right">
+                    <img src="photo/main.jpg" alt="Наш салон">
+                </div>
+            </div>
         </section>
     </main>
 
-    <!-- Подвал -->
     <footer>
         <div class="copyright">&copy; 2025 Салон штор "Стерх". Все права защищены.</div>
     </footer>
